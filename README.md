@@ -22,3 +22,7 @@ python evaluator.py \
   --dataset {aircraft,cars,cifar10,cifar100,cinic10,dtd,flowers102,food101,pets,stl10} \
   --model subnets/{dataset}/net-img@{xxx}-flops@{xxx}-top1@{xx.x}/net.config
 ```
+
+
+## Acknowledgement 
+Codes are modified from [OnceForAll](https://github.com/mit-han-lab/once-for-all) and [pytorch-image-models](https://github.com/rwightman/pytorch-image-models) 
