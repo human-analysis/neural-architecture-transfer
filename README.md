@@ -23,6 +23,8 @@ python evaluator.py \
   --model subnets/{dataset}/net-img@{xxx}-flops@{xxx}-top1@{xx.x}/net.config
 ```
 
+#### Architecture Visualization
+![visualization](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/archs.png)
 
 ## Acknowledgement 
 Codes are modified from [OnceForAll](https://github.com/mit-han-lab/once-for-all) and [pytorch-image-models](https://github.com/rwightman/pytorch-image-models) 
