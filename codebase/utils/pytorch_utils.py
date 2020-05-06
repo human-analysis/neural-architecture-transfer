@@ -1,10 +1,12 @@
 import copy
 import time
 import yaml
+import numpy as np
+from collections import OrderedDict
+
 import torch
 import torch.nn as nn
 
-import numpy as np
 from codebase.utils.flops_counter import profile
 
 
@@ -277,3 +279,23 @@ def get_net_info(net, input_shape=(3, 224, 224), measure_latency=None, print_inf
             print('Estimated %s latency: %.3fms' % (l_type, net_info['%s latency' % l_type]['val']))
     
     return net_info
+
+
+def load_state_dict(checkpoint, use_ema=False):
+    try:
+        state_dict_key = 'state_dict'
+        if isinstance(checkpoint, dict):
+            if use_ema and 'state_dict_ema' in checkpoint:
+                state_dict_key = 'state_dict_ema'
+        if state_dict_key and state_dict_key in checkpoint:
+            new_state_dict = OrderedDict()
+            for k, v in checkpoint[state_dict_key].items():
+                # strip `module.` prefix
+                name = k[7:] if k.startswith('module') else k
+                new_state_dict[name] = v
+            state_dict = new_state_dict
+        else:
+            state_dict = checkpoint
+        return state_dict
+    except:
+        raise FileNotFoundError()

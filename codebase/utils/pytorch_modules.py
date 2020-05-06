@@ -39,10 +39,10 @@ def build_activation(act_func, inplace=True):
     elif act_func == 'h_sigmoid':
         return Hsigmoid(inplace=inplace)
     elif act_func == 'swish':
-        from .activations import Swish
+        from timm.models.layers.activations import Swish
         return Swish(inplace=inplace)
     elif act_func == 'mish':
-        from .activations import Mish
+        from timm.models.layers.activations import Mish
         return Mish(inplace=inplace)
     elif act_func is None:
         return None

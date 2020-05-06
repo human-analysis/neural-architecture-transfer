@@ -1,4 +1,9 @@
+import shutil
+
+import torch.utils.model_zoo as model_zoo
+
 from codebase.modules.layers import *
+from codebase.utils.pytorch_utils import load_state_dict
 
 
 def drop_connect(inputs, training=False, drop_connect_rate=0.):
@@ -108,7 +113,7 @@ class NATNet(MyNetwork):
         }
 
     @staticmethod
-    def build_from_config(config, drop_connect_rate=0.0):
+    def build_from_config(config, drop_connect_rate=0.0, pretrained=False):
         first_conv = set_layer_from_config(config['first_conv'])
         final_expand_layer = set_layer_from_config(config['final_expand_layer'])
         feature_mix_layer = set_layer_from_config(config['feature_mix_layer'])
@@ -124,6 +129,13 @@ class NATNet(MyNetwork):
             net.set_bn_param(**config['bn'])
         else:
             net.set_bn_param(momentum=0.1, eps=1e-3)
+
+        if pretrained:
+            cache_dir = ".tmp"
+            state_dict = model_zoo.load_url(config['url'], model_dir=cache_dir, progress=True, map_location='cpu')
+            state_dict = load_state_dict(state_dict)
+            net.load_state_dict(state_dict)
+            shutil.rmtree(cache_dir)
 
         return net
 
