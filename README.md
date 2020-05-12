@@ -1,5 +1,5 @@
 # Neural Architecture Transfer
-![overview](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/overview.jpg)
+![overview](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/overview.jepg)
 
 ## Requirements
 ``` 
