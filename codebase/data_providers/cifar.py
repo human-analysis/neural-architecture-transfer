@@ -2,6 +2,11 @@ import torchvision
 import torch.utils.data
 import torchvision.transforms as transforms
 
+"""
+CIFAR-10 and CIFAR-100 can be automatically download
+CINIC-10 is available from https://github.com/BayesWatch/cinic-10
+"""
+
 
 class CIFAR10DataProvider:
 
