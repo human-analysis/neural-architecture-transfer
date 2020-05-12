@@ -1,5 +1,5 @@
 # Neural Architecture Transfer
-![overview](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/overview.jepg)
+![overview](assets/images/overview.jpg)
 
 ## Requirements
 ``` 
@@ -7,14 +7,14 @@ Python >= 3.7.x, PyTorch >= 1.4.0, timm >= 0.1.18
 ```
 
 #### ImageNet Classification
-![imagenet](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/imagenet.png)
+![imagenet](assets/images/imagenet.png)
 
 ``` shell
 python evaluator.py --data /path/to/dataset --model subnets/imagenet/NAT-{M1,M2,M3,M4}/net.config
 ```
 
 #### Architecture Transfer
-![transfer](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/dataset.png)
+![transfer](assets/images/dataset.png)
 
 ``` shell
 python evaluator.py \
@@ -24,7 +24,7 @@ python evaluator.py \
 ```
 
 #### Architecture Visualization
-![visualization](https://www.zhichaolu.com/assets/neural-architecture-transfer/images/archs.png)
+![visualization](assets/images/archs.png)
 
 ## Acknowledgement 
 Codes are modified from [OnceForAll](https://github.com/mit-han-lab/once-for-all) and [pytorch-image-models](https://github.com/rwightman/pytorch-image-models) 
