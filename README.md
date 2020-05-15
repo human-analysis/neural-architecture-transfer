@@ -1,4 +1,7 @@
 # Neural Architecture Transfer
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/neural-architecture-transfer/neural-architecture-search-on-imagenet)](https://paperswithcode.com/sota/neural-architecture-search-on-imagenet?p=neural-architecture-transfer)<br/>
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/neural-architecture-transfer/architecture-search-on-cifar-10-image)](https://paperswithcode.com/sota/architecture-search-on-cifar-10-image?p=neural-architecture-transfer)<br/>
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/neural-architecture-transfer/neural-architecture-search-on-cifar-100-1)](https://paperswithcode.com/sota/neural-architecture-search-on-cifar-100-1?p=neural-architecture-transfer)<br/>
 Code accompanying the paper. 
 > [Neural Architecture Transfer](https://arxiv.org/abs/2005.05859)
 >
