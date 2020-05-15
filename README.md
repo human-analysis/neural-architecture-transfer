@@ -5,6 +5,7 @@ Code accompanying the paper.
 > [Zhichao Lu](https://www.zhichaolu.com), [Gautam Sreekumar](http://hal.cse.msu.edu/team/gautam-sreekumar/), [Erik Goodman](https://www.egr.msu.edu/~goodman/), [Wolfgang Banzhaf](http://www.cse.msu.edu/~banzhafw/), [Kalyanmoy Deb](https://www.egr.msu.edu/~kdeb/), and [Vishnu Boddeti](http://hal.cse.msu.edu/team/vishnu-boddeti/)
 >
 > *arXiv:2005.05859*
+
 ![overview](assets/images/overview.png)
 
 ## Requirements
